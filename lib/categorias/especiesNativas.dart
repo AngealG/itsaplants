@@ -7,18 +7,18 @@ import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: cactaceasDeserticas(),
+    home: especiesNativas(),
   ));
 }
 
-class cactaceasDeserticas extends StatefulWidget {
-  const cactaceasDeserticas({Key? key}) : super(key: key);
+class especiesNativas extends StatefulWidget {
+  const especiesNativas({Key? key}) : super(key: key);
 
   @override
-  State<cactaceasDeserticas> createState() => _cactaceasDeserticas();
+  State<especiesNativas> createState() => _especiesNativasState();
 }
 
-class _cactaceasDeserticas extends State<cactaceasDeserticas> {
+class _especiesNativasState extends State<especiesNativas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +38,20 @@ class _cactaceasDeserticas extends State<cactaceasDeserticas> {
         padding: EdgeInsets.all(16),
         child: SingleChildScrollView(
           child: Column(children: [
+            CustomListItem(
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
             CustomListItem(
               imagePath: "img/cenizo.jpeg",
               commonName: "prueba",

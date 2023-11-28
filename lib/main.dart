@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itsaplant/categorias/cactaceasDeserticas.dart';
 import 'package:itsaplant/categorias/cetaceasMunicipio.dart';
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/services.dart';
@@ -47,12 +48,22 @@ class MainMenu extends StatelessWidget {
           childAspectRatio: 2.3 / 2, // Proporción del tamaño de los botones
           children: <Widget>[
             MenuButton(
-              title: 'Cetáceas Municipio',
+              title: 'Cactáceas Municipio',
               icon: Icons.water,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CetaceasMunicipio()),
+                  MaterialPageRoute(builder: (context) => CactaceasMunicipio()),
+                );
+              },
+            ),
+            MenuButton(
+              title: 'Cactáceas Desérticas',
+              icon: Icons.water,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => cactaceasDeserticas()),
                 );
               },
             ),

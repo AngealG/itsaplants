@@ -17,15 +17,15 @@ class MenuButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0), // Ajusta el radio aquí
+        borderRadius: BorderRadius.circular(15.0),
       ),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(15.0), // Asegúrate de que el InkWell también tenga bordes redondeados
+        borderRadius: BorderRadius.circular(15.0),
         child: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 175, 152, 143),
-            borderRadius: BorderRadius.circular(15.0), // Bordes redondeados para el contenedor
+            borderRadius: BorderRadius.circular(15.0),
           ),
           padding: EdgeInsets.all(8),
           child: Column(
@@ -33,11 +33,16 @@ class MenuButton extends StatelessWidget {
             children: <Widget>[
               Icon(icon, size: 50.0),
               SizedBox(height: 8),
-              Text(
-                title,
-                style: GoogleFonts.orelegaOne(
-                  textStyle: TextStyle(
-                    fontSize: 16,
+              Center( // Centrar el texto horizontalmente
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 9),
+                  child: Text(
+                    title,
+                    style: GoogleFonts.orelegaOne(
+                      textStyle: TextStyle(
+                        fontSize: 26,
+                      ),
+                    ),
                   ),
                 ),
               ),
